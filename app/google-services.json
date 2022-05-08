@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "962258377157",
+    "firebase_url": "https://vet-in-my-hand-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "vet-in-my-hand",
+    "storage_bucket": "vet-in-my-hand.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962258377157:android:08f64a5902f1be809a13ac",
+        "android_client_info": {
+          "package_name": "com.example.capstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962258377157-utbeoi4qi45a8p3h1g18e7g4nhk35fvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.capstone",
+            "certificate_hash": "2e07d1d2e0269d40ac702e5fa56d26d805bba00c"
+          }
+        },
+        {
+          "client_id": "962258377157-t892nb5hl0il2h212voe994lq371hk95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVDZVYVyoP8dY3btGglzm5ByCaQv4D46k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962258377157-t892nb5hl0il2h212voe994lq371hk95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
