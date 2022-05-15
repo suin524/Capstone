@@ -2,6 +2,7 @@ package com.example.capstone;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,11 +16,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     EditText et_id, et_pass;
     private FirebaseAuth mAuth;
     private Button btn_login;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +64,11 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(intent);
 
                                 }else{
-                                    Toast.makeText(MainActivity.this,"로그인 오류",Toast.LENGTH_SHORT).show();
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                    builder.setTitle("로그인 실패");
+                                    builder.setMessage("아이디와 비밀번호를 다시 확인 바랍니다.");
+                                    builder.setPositiveButton("ok", null);
+                                    builder.create().show();
                                 }
                             }
                         });
@@ -76,4 +85,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(MainActivity.this,findpass.class);
         startActivity(intent);
     }
+
+
 }
